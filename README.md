@@ -6,8 +6,8 @@ This is a solution by me for [Huddle landing page with curved sections challenge
 
 ### Links
 
-- [Solution Link](example.com)
-- [Live Site Link](exmaple.com)
+- [Solution Link](https://github.com/vinit-churi/huddle_landing_page)
+- [Live Site Link](https://vinit-churi.github.io/huddle_landing_page)
 
 ## My process
 
