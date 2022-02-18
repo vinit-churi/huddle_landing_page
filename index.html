@@ -116,10 +116,31 @@
           facilis. &Lorem ipsum, dolor sit amet consectetur adipisicing
         </p>
         <div class="newsletter_input">
-          <input type="text" />
+          <input id="email" type="text" />
           <div class="newsletter_submit_button">Subscribe</div>
         </div>
       </div>
     </footer>
+    <script>
+      const email = document.getElementById("email");
+      const emailButton = document.getElementsByClassName(
+        "newsletter_submit_button"
+      );
+      function ValidateEmail(value) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+          return true;
+        }
+        return false;
+      }
+
+      emailButton[0].addEventListener("click", () => {
+        const isEmail = ValidateEmail(email.value);
+        if (isEmail) {
+          email.style.border = "3px solid yellowgreen";
+        } else {
+          email.style.border = "3px solid red";
+        }
+      });
+    </script>
   </body>
 </html>

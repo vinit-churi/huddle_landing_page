@@ -10,12 +10,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.8rem 1.1rem;
+  @media only screen and (min-width: $mobile-view) {
+    padding: 2rem 3rem;
+  }
 
   &_logo {
     width: fit-content;
 
     img {
       width: 120px;
+      @media only screen and (min-width: $mobile-view) {
+        width: 140px;
+      }
     }
   }
   .nav-button {
@@ -25,10 +31,24 @@
     color: $light-pink;
     font-size: 0.8rem;
     cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      box-shadow: -1px -1px 15px 1px rgba(255, 143, 216, 0.59);
+      -webkit-box-shadow: -1px -1px 15px 1px rgba(255, 143, 216, 0.59);
+      -moz-box-shadow: -1px -1px 15px 1px rgba(255, 143, 216, 0.59);
+    }
+    @media only screen and (min-width: $mobile-view) {
+      font-size: 1.1rem;
+    }
   }
 }
 
 .header {
+  @media only screen and (min-width: $mobile-view) {
+    margin-bottom: 90px;
+  }
+
   .tag-line {
     width: 85%;
     margin-right: auto;
@@ -38,8 +58,26 @@
     font-weight: $heading-font-weight;
     text-align: center;
     font-size: 1.6rem;
+    @media only screen and (min-width: $mobile-view) {
+      margin-top: 120px;
+      font-size: 2.8rem;
+    }
+  }
+  p {
+    @media only screen and (min-width: $mobile-view) {
+      width: 30%;
+    }
   }
   .stats {
+    @media only screen and (min-width: $mobile-view) {
+      // margin-top: ;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 250px;
+    }
     .communities {
       width: 85%;
       margin-left: auto;
@@ -47,6 +85,12 @@
       width: max-content;
       text-align: center;
       margin-top: 90px;
+
+      & p {
+        @media only screen and (min-width: $mobile-view) {
+          width: max-content;
+        }
+      }
       .communities_number {
         font-size: 4.9rem;
         font-weight: $body-font-weight-600;
@@ -76,11 +120,19 @@
       width: max-content;
       text-align: center;
       margin-top: 90px;
+      & p {
+        @media only screen and (min-width: $mobile-view) {
+          width: max-content;
+        }
+      }
       .message_number {
         font-size: 4rem;
         font-weight: $body-font-weight-600;
         margin-top: 0;
         margin-bottom: 0;
+        @media only screen and (min-width: $mobile-view) {
+          font-size: 4.9rem;
+        }
 
         &::before {
           content: "";
@@ -98,7 +150,6 @@
       }
     }
   }
-  margin-bottom: 100px;
 }
 
 .grow {
@@ -107,6 +158,43 @@
   position: relative;
   background-color: #f6fbff;
   margin-bottom: 100px;
+  .grow_content {
+    @media only screen and (min-width: $mobile-view) {
+      // display: flex;
+      // flex-direction: column;
+      width: 50%;
+      // margin-left: auto;
+      // margin-right: auto;
+      padding-left: 8rem;
+    }
+    .grow_content_heading {
+      @media only screen and (min-width: $mobile-view) {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+    .grow_content_paragraph {
+      @media only screen and (min-width: $mobile-view) {
+        width: 60%;
+        margin: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  .grow_image {
+    @media only screen and (min-width: $mobile-view) {
+      width: 50%;
+    }
+  }
+  @media only screen and (min-width: $mobile-view) {
+    flex-direction: row;
+    align-items: center;
+    height: 300px;
+    //
+    // background-color: yellowgreen;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -120,6 +208,15 @@
     background-size: auto auto;
     background-position: bottom;
     background-size: cover;
+
+    @media only screen and (min-width: $mobile-view) {
+      background-image: url("../images/bg-section-top-desktop-1.svg");
+      background-size: cover;
+      width: 100%;
+      height: 60%;
+      top: -60%;
+      // background-color: red;
+    }
   }
   &::after {
     content: "";
@@ -133,6 +230,15 @@
     background-position: top;
     background-size: auto auto;
     background-size: contain;
+    @media only screen and (min-width: $mobile-view) {
+      z-index: -20;
+      background-image: url("../images/bg-section-bottom-desktop-1.svg");
+      background-size: cover;
+      width: 100%;
+      height: 50%;
+      bottom: -50%;
+      // background-color: red;
+    }
   }
 
   .grow_image {
@@ -143,23 +249,61 @@
 }
 
 .flowing {
-  margin-top: 150px;
+  @media only screen and (min-width: $mobile-view) {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    gap: 300px;
+  }
   .flowing_image {
     margin-bottom: 60px;
+    @media only screen and (min-width: $mobile-view) {
+      width: 50%;
+      margin: 0;
+    }
   }
-  .flowing_content_paragraph {
-    margin-top: 6px;
+  .flowing_content {
+    @media only screen and (min-width: $mobile-view) {
+      width: 40%;
+    }
+    .flowing_content_heading {
+      @media only screen and (min-width: $mobile-view) {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+    .flowing_content_paragraph {
+      margin-top: 6px;
+      @media only screen and (min-width: $mobile-view) {
+        width: 70%;
+        text-align: left;
+        margin: 0;
+        // padding-right: 1rem;
+      }
+    }
   }
+  // margin-bottom: 500px;
 }
 
 .users {
-  margin-top: 180px;
+  margin-top: 170px;
   display: flex;
   flex-direction: column-reverse;
   position: relative;
   background-color: #f6fbff;
   padding-top: 20px;
   margin-bottom: 150px;
+
+  @media only screen and (min-width: $mobile-view) {
+    margin-top: 250px;
+    flex-direction: row;
+    align-items: center;
+    height: 300px;
+    //
+    // background-color: yellowgreen;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -173,6 +317,14 @@
     background-size: auto auto;
     background-position: bottom;
     background-size: cover;
+    @media only screen and (min-width: $mobile-view) {
+      background-image: url("../images/bg-section-top-desktop-2.svg");
+      background-size: cover;
+      width: 100%;
+      height: 60%;
+      top: -60%;
+      // background-color: red;
+    }
   }
   &::after {
     content: "";
@@ -186,10 +338,53 @@
     background-position: top;
     background-size: auto auto;
     background-size: contain;
+    @media only screen and (min-width: $mobile-view) {
+      z-index: -20;
+      background-image: url("../images/bg-section-bottom-desktop-2.svg");
+      background-size: cover;
+      width: 100%;
+      height: 50%;
+      bottom: -50%;
+      // background-color: red;
+    }
+  }
+
+  @media only screen and (min-width: $mobile-view) {
+    // padding: 0 20%;
+    // padding-left: 10rem;
+    // padding-right: 10rem;
+  }
+  .users_content {
+    // @media only screen and (min-width: $mobile-view) {
+    //   // padding: 1rem 1rem;
+    //   // width: 260px;
+    // }
+
+    .users_content_heading {
+      @media only screen and (min-width: $mobile-view) {
+        width: 45%;
+        text-align: left;
+        margin-left: 8rem;
+        margin-bottom: 10px;
+      }
+    }
+    .users_content_paragraph {
+      @media only screen and (min-width: $mobile-view) {
+        // padding: 1rem 1rem;
+        // width: 260px;
+        margin-top: 0px;
+        width: 45%;
+        text-align: left;
+        margin-left: 8rem;
+      }
+    }
   }
 }
 
 .build {
+  @media only screen and (min-width: $mobile-view) {
+    margin-top: 200px;
+  }
   h3 {
     width: 70%;
     text-align: center;
@@ -209,10 +404,21 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 80px;
+
+  @media only screen and (min-width: $mobile-view) {
+    padding-top: 50px;
+    flex-direction: row;
+    // height: 600px;
+  }
   .about-and-contact {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+    @media only screen and (min-width: $mobile-view) {
+      // flex-direction: row;
+      // height: 600px;
+      width: 20%;
+    }
     img {
       width: 120px;
       margin-left: 0;
@@ -277,6 +483,11 @@
         // width: 20px;
         font-size: 2rem;
         cursor: pointer;
+        // color: black;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: hsl(210, 79%, 64%);
+        }
       }
       margin-bottom: 40px;
     }
@@ -285,6 +496,11 @@
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+    @media only screen and (min-width: $mobile-view) {
+      // flex-direction: row;
+      // height: 600px;
+      width: 25%;
+    }
     .newsletter_title {
       margin-top: 40px;
       width: 100%;
@@ -306,9 +522,16 @@
       flex-direction: column;
       gap: 10px;
       //   justify-content: flex-end;
-      input[type="text"] {
+      input[type="text"],
+      input[type="text"]:focus {
         height: 2.6rem;
         border-radius: 5px;
+        // outline-width: 2px;
+        // outline: green;
+        // border: 4px solid yellowgreen;
+        outline: none;
+        // input:focus {
+        // }
       }
       .newsletter_submit_button {
         background-color: $pink;
@@ -320,6 +543,12 @@
         font-weight: $body-font-weight-600;
         margin-left: auto;
         margin-right: 0;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+          background-color: $light-pink;
+        }
       }
     }
   }
@@ -337,5 +566,14 @@
     background-size: auto auto;
     background-position: bottom;
     background-size: contain;
+
+    @media only screen and (min-width: $mobile-view) {
+      background-image: url("../images/bg-footer-top-desktop.svg");
+      background-size: contain;
+      width: 100%;
+      height: 60%;
+      top: -60%;
+      // background-color: red;
+    }
   }
 }
