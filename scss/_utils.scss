@@ -1,0 +1,57 @@
+body {
+  font-family: $body-font;
+  //   overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.pink_button {
+  background-color: $pink;
+  width: 200px;
+  font-size: 0.9rem;
+  padding: 0.7rem 0.9rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  color: $very-pale-blue;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+img {
+  width: 85%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+}
+
+p {
+  width: 85%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: $body-font-weight-400;
+}
