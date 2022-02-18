@@ -2,7 +2,10 @@
 
 This is a solution by me for [Huddle landing page with curved sections challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2).
 
-### Screenshot
+### Screenshots:
+
+<img src="https://res.cloudinary.com/vinitchuri/image/upload/v1645199873/web%20projects/frontendmentor/CPT2202182125-350x752_qgpyhh.gif" alt="mobile view" style="width:200px;"/>
+<img src="https://res.cloudinary.com/vinitchuri/image/upload/v1645199871/web%20projects/frontendmentor/CPT2202182122-1517x749_bzzkxp.gif" alt="desktop view" style="width:60%;margin-right:30px"/>
 
 ### Links
 
